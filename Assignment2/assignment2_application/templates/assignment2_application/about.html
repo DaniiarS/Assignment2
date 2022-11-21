@@ -1,0 +1,13 @@
+{% extends 'assignment2_application/base.html' %}
+
+{% block content %}
+    {% for record in d_types %}
+    <article class="media content-section">
+        <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" > <h5>Disease Type: {{ record.description }}</a>
+            <!-- <small class="text-muted">DiseaseType id: {{ record.id }}</small> -->
+    </article>
+    {% endfor %}
+{% endblock content %}
+

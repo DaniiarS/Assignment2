@@ -1,0 +1,16 @@
+{% extends 'assignment2_application/base.html' %}
+
+{% block content %}
+    {% for record in posts %}
+        <article class="media content-section">
+            <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" > Disease code: {{ record.disease_code }}</a>
+                <small class="text-muted">Disease pathogen: {{ record.pathogen }}</small>
+            </div>
+            <h2><a class="article-title"> Disease id: {{ record.id }}</a></h2>
+            <p class="article-content">Disease description: {{ record.description }}</p>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

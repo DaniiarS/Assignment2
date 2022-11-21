@@ -1,0 +1,16 @@
+{% extends 'assignment2_application/base.html' %}
+
+{% block content %}
+<h1> Countires where diseases are present:<br><br> </h1>
+    {% for record in countries %}
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <h2>Country name: {{ record.cname }}</h2>
+                    <h5 class="text-muted">Population: {{ record.population }}</h5>
+                </div>
+            </div>
+        </article>
+    {% endfor %}
+
+{% endblock content %}
